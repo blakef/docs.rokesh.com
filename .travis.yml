@@ -4,6 +4,9 @@ install:
 - pip install mkdocs
 script:
 - mkdocs build --clean
+branches:
+    only:
+        - master
 deploy:
   provider: s3
   access_key_id: AKIAJQR6U2UEVJHHUBNA
