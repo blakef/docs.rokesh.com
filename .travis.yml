@@ -1,0 +1,14 @@
+language: python
+cache: pip
+install:
+- pip install mkdocs
+script:
+- mkdocs build --clean
+deploy:
+  provider: s3
+  access_key_id: AKIAJQR6U2UEVJHHUBNA
+  secret_access_key:
+    secure: Rr99vxJUyAw8+cG9Xnz1dorYR7OLaqHf00OBtZ1r82ZNVrYum0Hqlb7an1MzCfnobcMlfHyJoLORgLyUqj+Sa7cUSmxoXEocptiP8VpSnfQ132jJVHdQGlSr6FBP2S4AzpmlEhxpI0KFKFdlw+QH2ehODrWi6+qZsBhHVfcPu1T5pUCgBiZZWN7Ej73sGjAQSTC9oLvU6lzvvd27t9vsfBYIoxXjAge24XGfcCmT8eljflqCxd/IqBnqh+wyWFrWf3hHjJFr6klkG89uQoCWfs69FTL85KviFmfCXcvULoGUh0/3gbZ+FQRw3/VXHbkQWAnbb1GEldxpd6pXXu8gtDwsa0Ri8BuQ6Cx+tObVH7gv05ennltS6cxkaAjRrlIu+WjtPG9dDP76wLL3Q7jp196t5p9lEmHWQ8UK9lKso2+jsl7WPnVJT5qbJVFFbOR/rNYCpp18MYPlGtnBmqNCJpPgR4eelby4tYRvmoxbEnDZZ6wK+y/RmJVYEK24YOoLgaI+aqQrMTsjp3jZUmrUcm+X7MraPg6EVxhqFZ9qtmSu1uFMKFh+dYrq5uqrAd1Yuus+AcWzjRLahSOnRgyryftpxrp//t5Zr/tuCHC5tjq+D9a33eWNLZGHCzJavI7MZLz/p7GDJraLwQyaulSlpkgDEKRSc3mh6uxRMJPMG8Q=
+  bucket: docs.rokesh.com
+  skip_cleanup: true
+  local_dir: site

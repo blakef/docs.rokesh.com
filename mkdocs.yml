@@ -1,0 +1,15 @@
+site_name: Rokesh Design Docs
+site_url: https://docs.rokesh.com
+repo_url: https://github.com/blakef/rokesh/
+site_author: Blake Friedman
+site_description: Rokesh Design Document
+theme: readthedocs
+pages:
+    - Overview: 'index.md'
+    - App:
+        - 'Container': 'app/container.md'
+        - 'API': 'app/api-server.md'
+        - 'Builder': 'app/builder.md'
+        - 'Installer': 'app/installer.md'
+        - 'Application': 'app/application.md'
+
